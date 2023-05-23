@@ -1,0 +1,221 @@
+/* Barra de busca */
+
+
+.search{
+    width: 60vw;
+    height: 5vh;
+    background-color: rgb(85, 85, 85);
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 0;
+    border-radius: 15px;
+}
+
+.button-search{    
+    border-radius: 15px;
+    width: 5vw;
+    height: 5vh;
+    padding-bottom: .5%;
+    padding-top: .5%;
+    font-size: 15pt;
+    background-color: rgb(85, 85, 85);
+    display: flex;
+    border: 1px solid gray;
+    opacity: 0;
+    transition: .5s;
+    margin-left: 55vw;
+    margin-top: -6vh
+}
+
+.button-search svg{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: auto;
+    stroke: white;
+}
+
+.button-search:hover{
+    cursor: pointer;
+    background-color: rgb(122, 122, 122);
+
+}
+
+.search-input:focus + .search-text, .search-input:valid + .search-text{
+    opacity: 0;
+}
+
+.search-input:focus ~ .button-search, 
+.search-input:valid ~ .button-search{
+    opacity: 1;
+}
+
+
+.alert{
+	 margin: auto;
+    background-color: #eb6b6b;
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 80%;
+    margin-left: 10%;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.search-text{
+    width: fit-content;
+    position: absolute; 
+    margin-top: -3.5vh;
+    font-size: 15pt;
+    color: white;
+    transition: .3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-input{
+    background-color: transparent;
+    color: white;
+    height: 5vh;
+    font-size: 15pt;
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.search:hover .search-text{
+    margin-top: -7vh;
+}
+
+.search-input:focus + .search-text{
+    opacity: 0;
+}
+
+/* filters */
+
+.filters{
+    margin-top: 5%;
+    display: flex;
+    
+}
+
+.filter-select-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+.filter{
+    display: grid;
+    width: 10vw;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid black;
+}
+
+.ordenar{
+    margin-left: 70%;
+}
+
+.filtrar{
+    margin-left: 5%;
+}
+
+.filter-select{
+    width: 10vw;
+    border-radius: 15px;
+    font-size: 17pt;
+}
+
+.filter-select:focus{
+    outline: 0;
+}
+
+/* Livros */
+
+.books{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    grid-row-gap: 5%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.background-book{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    perspective: 2000px;
+}
+
+.book{
+    background-size: cover;
+    transform-style: preserve-3d;
+    transition: .3s;
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    max-width: calc((80vw/3) * 0.9)
+}
+
+.book::before{
+    content: 'teste';
+    position: absolute;
+    background-image: url('lado.png');
+    background-size: 50px 50px; 
+    width: 50px;
+    height: 100%;
+    background-color: blue;
+    transform-origin: left;
+    transform: rotateY(-90deg) translate(-100%); 
+}
+
+.book:hover{
+    transform: rotateY(45deg) translate(45px); 
+    cursor: pointer;
+}
+
+.book img{
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    margin: auto;
+    transition: .3s;
+}
+
+
+.book-layer{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-top: -32vw;
+    z-index: 1;
+    margin-left: 85%;
+}
+
+.book-layer-svg{
+    border-radius: 15px;
+    padding: 2px;
+    width: 3vw;
+    height: 3vw;
+    transition: .3s;
+    stroke: white;
+    fill: gray;
+
+}
+
+.book-layer-svg:hover{
+    fill: rgb(240, 240, 39);
+    stroke: rgb(240, 240, 39);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    border-top: 1px solid black;
+    margin-top: 5%;
+}
+
+

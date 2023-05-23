@@ -1,0 +1,265 @@
+.search{
+    width: 60vw;
+    height: 5vh;
+    background-color: rgb(85, 85, 85);
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 0;
+    border-radius: 15px;
+}
+
+.alert{
+	 margin: auto;
+    background-color: #eb6b6b;
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 80%;
+    margin-left: 10%;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.search-text{
+    width: fit-content;
+    position: absolute; 
+    margin-top: -3.5vh;
+    font-size: 15pt;
+    color: white;
+    transition: .3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-input{
+    background-color: transparent;
+    color: white;
+    height: 5vh;
+    font-size: 15pt;
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.search:hover .search-text{
+    margin-top: -7vh;
+}
+
+.search-input:focus + .search-text, .search-input:valid + .search-text{
+    opacity: 0;
+}
+
+.button-search{    
+    border-radius: 15px;
+    width: 5vw;
+    height: 5vh;
+    padding-bottom: .5%;
+    padding-top: .5%;
+    font-size: 15pt;
+    background-color: rgb(85, 85, 85);
+    display: flex;
+    border: 1px solid gray;
+    opacity: 0;
+    transition: .5s;
+    margin-left: 55vw;
+    margin-top: -6vh
+}
+
+.button-search svg{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: auto;
+    stroke: white;
+}
+
+.button-search:hover{
+    cursor: pointer;
+    background-color: rgb(122, 122, 122);
+
+}
+
+.search-input:focus ~ .button-search, 
+.search-input:valid ~ .button-search{
+    opacity: 1;
+}
+
+.search-label, .label-finded{
+    width: 85vw;
+    margin: auto;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.label-finded{
+    width: fit-content;
+    border: 1px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 0;
+    padding-left: 2%;
+    padding-right: 5%;
+    margin-left: 10vw;
+    margin-top: 2%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    background-color: rgb(190, 190, 190);
+}
+
+
+/* Livros */
+
+.books, .users{
+    display: flex;
+    width: 90vw;
+    grid-row-gap: 5%;
+    margin: auto;
+    border: 1px solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.books::-webkit-scrollbar, .users::-webkit-scrollbar {
+    width: 10px; /* largura da barra de rolagem */
+  }
+  
+  .books::-webkit-scrollbar-track, .users::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* cor do fundo da barra de rolagem */
+  }
+  
+  .books::-webkit-scrollbar-thumb, .users::-webkit-scrollbar-thumb {
+    background-color: #888; /* cor da barra de rolagem */
+    border-radius: 5px; /* raio das bordas da barra de rolagem */
+  }
+  
+  .books::-webkit-scrollbar-thumb:hover, .users::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* cor da barra de rolagem quando o mouse está sobre ela */
+  }
+
+/* Config busca uruarios */
+
+.user-users{
+    display: grid;
+    grid-template-areas: "img name"
+                         "img tag" ;
+    width: calc(90vw /3.5);
+    padding: .5vw;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: rgb(221, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .2s;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.user-background{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.user-users:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.user-img-search{
+    grid-area: img;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.user-name-search{
+    grid-area: name;
+    height: fit-content;
+    margin-top: auto;
+    font-size: 15pt;
+}
+
+.user-tag-search{
+    grid-area: tag;
+    margin-top: 0;
+}
+
+.background-book{
+    width: 80%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    display: grid;
+    perspective: 2000px;
+}
+
+.book{
+    background-size: cover;
+    transform-style: preserve-3d;
+    transition: .3s;
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    max-width: calc((80vw/3) * 0.9)
+}
+
+.book::before{
+    content: 'teste';
+    position: absolute;
+    background-image: url('lado.png');
+    background-size: 50px 50px; 
+    width: 50px;
+    height: 100%;
+    background-color: blue;
+    transform-origin: left;
+    transform: rotateY(-90deg) translate(-100%); 
+}
+
+.book:hover{
+    transform: rotateY(45deg) translate(45px); 
+    cursor: pointer;
+}
+
+.book img{
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    margin: auto;
+    transition: .3s;
+}
+
+
+.book-layer{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-top: -32vw;
+    z-index: 1;
+    margin-left: 85%;
+}
+
+.book-layer-svg{
+    border-radius: 15px;
+    padding: 2px;
+    width: 3vw;
+    height: 3vw;
+    transition: .3s;
+    stroke: white;
+    fill: gray;
+
+}
+
+.book-layer-svg:hover{
+    fill: rgb(240, 240, 39);
+    stroke: rgb(240, 240, 39);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    border-top: 1px solid black;
+    margin-top: 5%;
+}

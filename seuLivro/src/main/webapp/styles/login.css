@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    background-image: url('../images/fundo.png');
+    display: flex;
+}
+
+.logo{
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    display: flex;
+    height: 10vh;
+}
+
+.logo > *{
+    height: 100%;
+    margin-left: 5%;
+}
+
+.logo-text{
+    margin-top: 0;
+    height: fit-content;
+    margin: auto;
+}
+
+.background{
+    width: 60vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 2vh;
+    margin: auto;
+    margin-top: 10vh;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
+.background-types{
+    width: 100%;
+    margin: auto;
+    height: 84vh;
+    margin-top: -2vh;
+    display: flex;
+    border-right: 2px solid black;
+}
+
+.background-types-background{
+    margin: auto;
+    height: fit-content;
+    width: 100%;
+}
+
+.type-text{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: fit-content;
+    padding: 1vh 2vh 1vh 2vh;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: auto;
+    width: 60%;
+    transition: .2s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;
+    background-color: gray;
+    color: white;
+}
+
+.under{
+    margin-top: 1%;
+}
+
+.button:active{
+    width: 64%;
+}
+
+.selected{
+    background-color: aliceblue;
+    color: black;
+    border: 3px solid black;
+}
+
+.background-inputs{
+    overflow-y: auto;
+    width: 43vw;
+    height: 84vh;
+    margin-top: -2vh;
+    transition: .2s;
+}
+
+.background-inputs::-webkit-scrollbar {
+    width: 0; /* largura da barra de rolagem */
+  }
+  
+.background-inputs::-webkit-scrollbar-track {
+    background-color: transparent; /* cor do fundo da barra de rolagem */
+  }
+  
+.background-inputs::-webkit-scrollbar-thumb {
+    background-color: transparent; /* cor da barra de rolagem */
+    border-radius: 0; /* raio das bordas da barra de rolagem */
+  }
+  
+.background-inputs::-webkit-scrollbar-thumb:hover {
+    background-color: 0; /* cor da barra de rolagem quando o mouse está sobre ela */
+  }
+
+
+.background-login{
+    width: 43vw;
+    border-radius: 15px;
+    height: 84vh;
+    display: flex;
+}
+
+.background-login-inputs{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    background-color: rgb(212, 212, 212);
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 40% 20%;
+}
+
+.background-input{
+    margin: auto;
+    height: 45%;
+    width: 100%;
+}
+
+.input-input{
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    font-size: 20pt;
+    margin-left: 15%;
+
+}
+
+.input-input-text{
+    font-size: 20pt;
+    margin-top: -9%;
+    margin-left: 17%;
+    transition: .3s;
+    width: fit-content;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 15px;
+
+}
+
+ 
+
+.input-input:focus{
+    outline: 0;
+}
+
+.input-input:focus + .input-input-text, .input-input:valid + .input-input-text, .input-input:hover + .input-input-text{
+    margin-top: -17%;
+    opacity: 0;
+}
+
+.background-login-button{
+    width: 60%;
+    margin: auto;
+    height: 70%;
+    font-size: 20pt;
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.background-login-button:active{
+    width: 62%;
+    height: 72%;
+}
+
+
+/* Registros */
+
+.background-register{
+    width: 43vw;
+    border-radius: 15px;
+    height: 84vh;
+    display: grid;
+    grid-template-areas: "picture name surname"
+                         "picture email tag"
+                         "birth password confirm"
+                         "button button button";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.space{
+    grid-area: space;
+}
+
+
+.background-register .background-input{
+    width: 100%;
+    height: 100%;
+}
+
+.background-register .input-input{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 25%;
+    padding: 0;
+    height: 33%;
+    font-size: 15pt;
+}
+.background-register .input-input-text{
+    margin: 0;
+    margin-left: 7%;
+    margin-top: -20%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#picture{
+    grid-area: picture;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+#span-name{
+    grid-area: name;
+}
+
+
+#span-surname{
+    grid-area: surname;
+}
+
+#span-birth{
+    grid-area: birth;
+}
+
+#span-email{
+    grid-area: email;
+}
+
+#span-tag{
+    grid-area: tag;
+}
+
+#span-password{
+    grid-area: password;
+}
+
+#span-confirm{
+    grid-area: confirm;
+}
+
+.register{
+    grid-area: button;
+    background-color: rgb(105, 105, 105);
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 15pt;
+    transition: .3s;
+    cursor: pointer;
+    color: white;
+}

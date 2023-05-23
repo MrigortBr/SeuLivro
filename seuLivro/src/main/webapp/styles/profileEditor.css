@@ -1,0 +1,159 @@
+.background-profile{
+    width: 80vw;
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: grid;
+    margin-bottom: 5%;
+}
+
+.profile-picture{
+    width: 24vw;
+    height: 24vw;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 2%;
+}
+
+
+.name-span, .password-span{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 30%;
+    margin-bottom: 1%;
+}
+
+.profile-name, .profile-newpassword{
+    width: 95%;
+    margin: 0;
+
+}
+
+.profile-surname, .profile-newpasswordConfirm{
+    width: 100%;
+    margin-right: 5%;
+}
+
+.profile-email, .profile-tag, .profile-age, .profile-password{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.profile-password{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+input{
+    border-color: transparent;
+    border-width: 1px;
+    border-bottom: 1px solid black;
+
+    
+}
+
+input:hover{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+
+.profile-bio{
+    width: 80%;
+    font-size: 15pt;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+/* Livros publicados */
+
+hr{
+    color: black;
+    width: 100%;
+}
+
+.books-label{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2%;
+}
+
+.list-books{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.background-book{
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    perspective: 2000px;
+}
+
+.book{
+    background-size: cover;
+    transform-style: preserve-3d;
+    transition: .3s;
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    max-width: calc((80vw/3) * 0.9)
+}
+
+.book::before{
+    content: 'teste';
+    position: absolute;
+    background-image: url('lado.png');
+    background-size: 50px 50px; 
+    width: 50px;
+    height: 100%;
+    background-color: blue;
+    transform-origin: left;
+    transform: rotateY(-90deg) translate(-100%); 
+}
+
+.book:hover{
+    transform: rotateY(45deg) translate(45px); 
+    cursor: pointer;
+}
+
+img{
+    width: calc((80vw/3) * 0.9);
+    height: calc((80vw/2.5));
+    margin: auto;
+    transition: .3s;
+}
+
+.button-change-info{
+    width: 40%;
+    margin: auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    outline: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.background-profile input{
+    outline: 0;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.button-change-info:Hover{
+    background-color: rgba(0, 128, 0, 0.521);
+    font-weight: bold;
+    width: 42%;
+
+}
